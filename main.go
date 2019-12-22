@@ -3,22 +3,25 @@ package main
 import (
 	"io/ioutil"
 	"log"
+	"os"
 	"strings"
 )
 
-var Memory [30000]int
-
 func main() {
-	dat, err := ioutil.ReadFile("hello.bf")
-	if err != nil {
-		log.Println(err)
-	}
+	if len(os.Args) > 1 {
+		dat, err := ioutil.ReadFile(os.Args[1])
+		if err != nil {
+			log.Println(err)
+		}
 
-	code := string(dat)
+		code := string(dat)
 
-	if isValid(code) {
-		c := NewCPU(code)
-		c.execute()
+		if isValid(code) {
+			c := NewCPU(code)
+			c.execute()
+		}
+	} else {
+		log.Fatal("File not specified")
 	}
 
 }
