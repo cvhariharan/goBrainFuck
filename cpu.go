@@ -74,6 +74,8 @@ func (c *cpu) execute() {
 			} else {
 				c.pc++
 			}
+		default:
+			c.pc++
 		}
 		// time.Sleep(time.Millisecond * 1000)
 	}
