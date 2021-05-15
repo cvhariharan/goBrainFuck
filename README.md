@@ -1,5 +1,5 @@
 # goBrainfuck
-goBrainfuck is a small (~200 lines) brainf*** interpreter written in golang. Read more at [Writing a BrainFuck interpreter in Golang](https://cvhariharan.github.io/projects/2019/12/23/wiriting-interpreter/).
+goBrainfuck is a small (~200 lines) brainf*** interpreter written in golang. Read more at [Writing a BrainFuck interpreter in Golang](https://blog.trieoflogs.com/writing-interpreter-in-golang/).
 
 ### Example
 The executable can be found inside the build directory.
